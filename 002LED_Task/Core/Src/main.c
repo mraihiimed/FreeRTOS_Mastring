@@ -341,6 +341,8 @@ static void led_green_handler(void* parameters ){
 	//char msg[100];
 	while(1){
 
+		HAL_GPIO_TogglePin(GPIOD, LED_GREEN_PIN);
+		HAL_Delay(1000);
 		//snprintf(msg,100,"%s\n", (char*)parameters);
 		//SEGGER_SYSVIEW_PrintfTarget(msg);
 		//taskYIELD();
@@ -350,18 +352,22 @@ static void led_red_handler(void* parameters ){
 	//char msg[100];
 	while(1){
 
-		//snprintf(msg,100,"%s\n", (char*)parameters);
+		HAL_GPIO_TogglePin(GPIOD, LED_RED_PIN);
+		HAL_Delay(800);
+
 		//SEGGER_SYSVIEW_PrintfTarget(msg);
-		//taskYIELD();
+
 	}
 }
 static void led_orange_handler(void* parameters ){
 	//char msg[100];
 	while(1){
 
-		//snprintf(msg,100,"%s\n", (char*)parameters);
+		HAL_GPIO_TogglePin(GPIOD, LED_ORANGE_PIN);
+		HAL_Delay(400);
+
 		//SEGGER_SYSVIEW_PrintfTarget(msg);
-		//taskYIELD();
+
 	}
 }
 /* USER CODE END 4 */
